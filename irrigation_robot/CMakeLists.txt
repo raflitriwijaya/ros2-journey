@@ -15,9 +15,14 @@ ament_target_dependencies(lesson1_minimal_node rclcpp)
 add_executable(lesson2_publisher src/lesson2_publisher.cpp)
 ament_target_dependencies(lesson2_publisher rclcpp std_msgs)
 
+add_executable(lesson3_subscriber src/lesson3_subscriber.cpp)
+ament_target_dependencies(lesson3_subscriber rclcpp std_msgs)
+
+
 install(TARGETS
   lesson1_minimal_node
   lesson2_publisher
+  lesson3_subscriber
   DESTINATION lib/${PROJECT_NAME}
 )
 
