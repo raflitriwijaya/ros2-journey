@@ -1,3 +1,8 @@
 {
-    "cmake.sourceDirectory": "/home/hp_5c/ros2_ws/src/ros2-journey/irrigation_msgs"
+    "cmake.sourceDirectory": "/home/hp_5c/ros2_ws/src/ros2-journey/irrigation_msgs",
+        // Removed Copilot inline instruction settings — use instruction files instead per VS Code guidance
+    
+        // If you need project-specific Copilot instructions, add a .github/copilot-instructions.json or
+        // use the recommended instructions files. See https://aka.ms/vscode-ghcp-custom-instructions
 }
+
