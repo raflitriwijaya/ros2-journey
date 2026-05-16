@@ -9,6 +9,7 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(std_srvs REQUIRED)
+find_package(irrigation_msgs REQUIRED)
 
 add_executable(lesson1_minimal_node src/lesson1_minimal_node.cpp)
 ament_target_dependencies(lesson1_minimal_node rclcpp)
@@ -28,6 +29,9 @@ ament_target_dependencies(lesson4_service_client rclcpp std_srvs)
 add_executable(lesson5_param_node src/lesson5_param_node.cpp)
 ament_target_dependencies(lesson5_param_node rclcpp)
 
+add_executable(lesson7_custom_msg_pub src/lesson7_custom_msg_pub.cpp)
+ament_target_dependencies(lesson7_custom_msg_pub rclcpp irrigation_msgs)
+
 install(TARGETS
   lesson1_minimal_node
   lesson2_publisher
@@ -35,6 +39,7 @@ install(TARGETS
   lesson4_service_server
   lesson4_service_client
   lesson5_param_node
+  lesson7_custom_msg_pub
   DESTINATION lib/${PROJECT_NAME}
 )
 
