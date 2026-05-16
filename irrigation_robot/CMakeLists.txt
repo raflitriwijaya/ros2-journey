@@ -10,6 +10,7 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(std_srvs REQUIRED)
 find_package(irrigation_msgs REQUIRED)
+find_package(rclcpp_action REQUIRED)
 
 add_executable(lesson1_minimal_node src/lesson1_minimal_node.cpp)
 ament_target_dependencies(lesson1_minimal_node rclcpp)
@@ -41,6 +42,12 @@ ament_target_dependencies(lesson9_service_server rclcpp irrigation_msgs)
 add_executable(lesson9_service_client src/lesson9_service_client.cpp)
 ament_target_dependencies(lesson9_service_client rclcpp irrigation_msgs)
 
+add_executable(lesson10_action_client src/lesson10_action_client.cpp)
+ament_target_dependencies(lesson10_action_client rclcpp rclcpp_action irrigation_msgs)
+
+add_executable(lesson10_action_server src/lesson10_action_server.cpp)
+ament_target_dependencies(lesson10_action_server rclcpp rclcpp_action irrigation_msgs)
+
 install(TARGETS
   lesson1_minimal_node
   lesson2_publisher
@@ -52,6 +59,8 @@ install(TARGETS
   lesson8_custom_msg_sub
   lesson9_service_server
   lesson9_service_client
+  lesson10_action_client
+  lesson10_action_server
   DESTINATION lib/${PROJECT_NAME}
 )
 

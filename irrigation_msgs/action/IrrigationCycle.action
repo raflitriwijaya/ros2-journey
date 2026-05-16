@@ -1,0 +1,16 @@
+# GOAL - what the client request
+string  field_name
+float64 target_moisture_percent
+float64 max_duration_seconds
+---
+# RESULT - returned when action finishes
+bool    success
+float64 final_moisture_percent
+float64 total_water_liters
+string  message
+---
+# FEEDBACK - sent repeatedly while running
+float64 current_moisture_percent
+float64 water_applied_liters
+float64 elapsed_seconds
+string  status_message

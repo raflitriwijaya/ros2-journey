@@ -1,5 +1,12 @@
 {
     "cmake.sourceDirectory": "/home/hp_5c/ros2_ws/src/ros2-journey/irrigation_msgs",
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
         // Removed Copilot inline instruction settings — use instruction files instead per VS Code guidance
     
         // If you need project-specific Copilot instructions, add a .github/copilot-instructions.json or
