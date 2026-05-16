@@ -1,0 +1,9 @@
+# REQUEST
+string  field_name
+float64 duration_seconds
+float64 moisture_threshold
+---
+# RESPONSE
+bool    success
+string  message
+float64 water_applied_liters

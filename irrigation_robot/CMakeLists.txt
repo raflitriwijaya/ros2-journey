@@ -35,6 +35,12 @@ ament_target_dependencies(lesson7_custom_msg_pub rclcpp irrigation_msgs)
 add_executable(lesson8_custom_msg_sub src/lesson8_custom_msg_sub.cpp)
 ament_target_dependencies(lesson8_custom_msg_sub rclcpp irrigation_msgs)
 
+add_executable(lesson9_service_server src/lesson9_service_server.cpp)
+ament_target_dependencies(lesson9_service_server rclcpp irrigation_msgs)
+
+add_executable(lesson9_service_client src/lesson9_service_client.cpp)
+ament_target_dependencies(lesson9_service_client rclcpp irrigation_msgs)
+
 install(TARGETS
   lesson1_minimal_node
   lesson2_publisher
@@ -44,6 +50,8 @@ install(TARGETS
   lesson5_param_node
   lesson7_custom_msg_pub
   lesson8_custom_msg_sub
+  lesson9_service_server
+  lesson9_service_client
   DESTINATION lib/${PROJECT_NAME}
 )
 
