@@ -48,6 +48,9 @@ ament_target_dependencies(lesson10_action_client rclcpp rclcpp_action irrigation
 add_executable(lesson10_action_server src/lesson10_action_server.cpp)
 ament_target_dependencies(lesson10_action_server rclcpp rclcpp_action irrigation_msgs)
 
+add_executable(lesson11_executor src/lesson11_executor.cpp)
+ament_target_dependencies(lesson11_executor rclcpp irrigation_msgs)
+
 install(TARGETS
   lesson1_minimal_node
   lesson2_publisher
@@ -61,6 +64,7 @@ install(TARGETS
   lesson9_service_client
   lesson10_action_client
   lesson10_action_server
+  lesson11_executor
   DESTINATION lib/${PROJECT_NAME}
 )
 
